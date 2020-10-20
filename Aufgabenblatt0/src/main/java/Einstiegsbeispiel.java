@@ -1,6 +1,7 @@
 //Wetscher Nicolas 11845621
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Einstiegsbeispiel {
 	public static void main(String[] args) {
@@ -9,16 +10,16 @@ public class Einstiegsbeispiel {
 
 		System.out.println(getRepetitions(array).values());
 
-		HashMap<Integer,Integer> exm = getRepetitions(array);
+		Map<Integer,Integer> exm = getRepetitions(array);
 
 
 		for (Integer ex : exm.keySet()) {
-			System.out.println(ex);
+			System.out.print(ex+", ");
 
 		}
 	}
 
-	public static HashMap getRepetitions(int[] arr){
+	public static Map<Integer, Integer> getRepetitions(int[] arr){
 
 		HashMap<Integer, Integer> reps = new HashMap<Integer, Integer>();
 
