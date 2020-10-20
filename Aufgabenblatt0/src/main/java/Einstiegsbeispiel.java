@@ -6,7 +6,7 @@ import java.util.Map;
 public class Einstiegsbeispiel {
 	public static void main(String[] args) {
 		
-		int[] array = new int[]{2,2,2,2,3,4,4,4,1};
+		int[] array = new int[]{1,1,1,2,2,2,2,3,4,4,4};
 
 		System.out.println(getRepetitions(array).values());
 

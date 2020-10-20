@@ -16,9 +16,6 @@ public class EinstiegsbeispielTest {
 		Map<Integer, Integer> tester = Einstiegsbeispiel.getRepetitions(testArr);
 
 		assertEquals(2,(int)tester.get(1),"Test failed");
-
-
-
 	}
 
 	@Test
@@ -28,14 +25,11 @@ public class EinstiegsbeispielTest {
 		Map<Integer, Integer> tester2 = Einstiegsbeispiel.getRepetitions(testArr2);
 
 		assertEquals(3,(int)tester2.get(2),"Test2 failed misserably");
-
 	}
 
 	@Test
 	public void WhenEnteringNothing_ThenExpectError(){
 		int[] testArr3 = new int[]{};
-
-
 
 		try{
 			Map<Integer,Integer> tester3 = Einstiegsbeispiel.getRepetitions(testArr3);
@@ -43,13 +37,11 @@ public class EinstiegsbeispielTest {
 		}catch(NullPointerException npex){
 			System.out.println("Tut uns leid ein leeres Array kann nicht bearbeitet werden.");
 		}
-
 	}
 
 	@Test
 	public void WhenEnteringTooManyNumbers_ThenExpectError(){
 		int[] testArr4 = new int[]{0,0,1000,55,99,101010,54545,10};
-
 
 		try{
 			Map<Integer, Integer> tester4 = Einstiegsbeispiel.getRepetitions(testArr4);
@@ -58,9 +50,6 @@ public class EinstiegsbeispielTest {
 		}catch(IllegalArgumentException iaex){
 			System.out.println("Bitte auf die Reihenfolge Achten!");
 		}
-
-
-
 	}
 
 
