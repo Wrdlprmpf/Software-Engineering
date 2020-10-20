@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45557b1-84eb-4d84-a690-759ab78aa02c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Einstiegsbeispiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Einstiegsbeispiel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EinsteigsbeispielTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EinstiegsbeispielTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EinstiegsbeispielTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EinstiegsbeispielTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Einstiegsbeispiel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Einstiegsbeispiel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/EinsteigsbeispielTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/EinstiegsbeispielTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EinstiegsbeispielTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="JUnit.EinstiegsbeispielTest.WhenEnteringTwoFoursAndSixFives_ThenExpectTwoAndSix">
+  <component name="RunManager" selected="JUnit.EinstiegsbeispielTest.WhenEnteringTooManyNumbers_ThenExpectError">
     <configuration name="Einstiegsbeispiel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Einstiegsbeispiel" />
       <module name="Aufgabenblatt0" />
@@ -56,11 +55,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EinstiegsbeispielTest.Test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EinstiegsbeispielTest.WhenEnteringNothing_ThenExpectError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aufgabenblatt0" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="EinstiegsbeispielTest" />
-      <option name="METHOD_NAME" value="Test1" />
+      <option name="METHOD_NAME" value="WhenEnteringNothing_ThenExpectError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EinstiegsbeispielTest.WhenEnteringTooManyNumbers_ThenExpectError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Aufgabenblatt0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EinstiegsbeispielTest" />
+      <option name="METHOD_NAME" value="WhenEnteringTooManyNumbers_ThenExpectError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,10 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EinstiegsbeispielTest.WhenEnteringTwoFoursAndSixFives_ThenExpectTwoAndSix" />
+        <item itemvalue="JUnit.EinstiegsbeispielTest.WhenEnteringTooManyNumbers_ThenExpectError" />
+        <item itemvalue="JUnit.EinstiegsbeispielTest.WhenEnteringNothing_ThenExpectError" />
         <item itemvalue="Application.Einstiegsbeispiel" />
+        <item itemvalue="JUnit.EinstiegsbeispielTest.WhenEnteringTwoFoursAndSixFives_ThenExpectTwoAndSix" />
         <item itemvalue="JUnit.EinstiegsbeispielTest" />
-        <item itemvalue="JUnit.EinstiegsbeispielTest.Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -107,22 +117,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603203308322" />
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom" timestamp="1603204873964">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom" timestamp="1603207714525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603204873964" />
-    <state width="1877" height="298" key="GridCell.Tab.0.center" timestamp="1603204873964">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603207714525" />
+    <state width="1877" height="144" key="GridCell.Tab.0.center" timestamp="1603207714525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603204873964" />
-    <state width="1877" height="298" key="GridCell.Tab.0.left" timestamp="1603204873964">
+    <state width="1877" height="144" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603207714525" />
+    <state width="1877" height="144" key="GridCell.Tab.0.left" timestamp="1603207714525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603204873964" />
-    <state width="1877" height="298" key="GridCell.Tab.0.right" timestamp="1603204873964">
+    <state width="1877" height="144" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603207714525" />
+    <state width="1877" height="144" key="GridCell.Tab.0.right" timestamp="1603207714525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="298" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603204873964" />
+    <state width="1877" height="144" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1080@0.0.1920.1040" timestamp="1603207714525" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603195196066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
