@@ -106,11 +106,6 @@ public class BaseTest {
 
 	}
 
-	@Test
-	public void shouldThrow_whenWrongInput(){
-		ringBuffer.push(1);
-		assertFalse(ringBuffer.pop());
-	}
 
 }
 

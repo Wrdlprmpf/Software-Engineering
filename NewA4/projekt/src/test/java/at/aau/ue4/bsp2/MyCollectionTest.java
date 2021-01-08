@@ -22,4 +22,17 @@ public class MyCollectionTest
     public void testSizeSimple() {
         assertEquals(3,c.size());
     }
+
+    @Test
+    public void shouldReduceByOne_whenOneIsRemoved(){
+        assertEquals(3,c.size());
+        c.remove("1");
+        assertEquals(2,c.size());
+    }
+
+    @Test
+    public void shouldEmpty_WhenExecuted(){
+        c.empty();
+        assertEquals(0,c.size());
+    }
 }
