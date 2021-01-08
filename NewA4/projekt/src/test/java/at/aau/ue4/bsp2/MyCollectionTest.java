@@ -35,4 +35,5 @@ public class MyCollectionTest
         c.empty();
         assertEquals(0,c.size());
     }
+
 }

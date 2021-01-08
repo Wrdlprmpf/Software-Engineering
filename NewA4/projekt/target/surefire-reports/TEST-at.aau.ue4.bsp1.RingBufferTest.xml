@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="23" failures="0" name="at.aau.ue4.bsp1.RingBufferTest" time="0.021" errors="0" skipped="0">
+<testsuite tests="23" failures="0" name="at.aau.ue4.bsp1.RingBufferTest" time="0.025" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.7+8-LTS"/>
@@ -65,27 +65,27 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="BaseTest" name="shouldReturnTrue_whenHasNext()" time="0.011"/>
+  <testcase classname="BaseTest" name="shouldReturnTrue_whenHasNext()" time="0.013"/>
   <testcase classname="BaseTest" name="shouldReturnTrue_whenEmpty()" time="0"/>
-  <testcase classname="BaseTest" name="shouldReturnObjekt_whenExecuted()" time="0.003"/>
+  <testcase classname="BaseTest" name="shouldReturnObjekt_whenExecuted()" time="0.004"/>
   <testcase classname="BaseTest" name="shouldThrow_whenEmptyPoped()" time="0.001"/>
   <testcase classname="BaseTest" name="shouldDecreaseSize_whenPopItems()" time="0"/>
-  <testcase classname="BaseTest" name="shouldThrow_whenNoNext()" time="0.001"/>
+  <testcase classname="BaseTest" name="shouldThrow_whenNoNext()" time="0"/>
   <testcase classname="BaseTest" name="shouldThrow_whenPushedOverCapacity()" time="0"/>
   <testcase classname="BaseTest" name="shouldReturnFalse_whenHasNoNext()" time="0.001"/>
-  <testcase classname="BaseTest" name="shouldIncreaseSize_whenPushingItems()" time="0"/>
-  <testcase classname="BaseTest" name="shouldThrow_whenExecuted()" time="0.001"/>
+  <testcase classname="BaseTest" name="shouldIncreaseSize_whenPushingItems()" time="0.001"/>
+  <testcase classname="BaseTest" name="shouldThrow_whenExecuted()" time="0"/>
   <testcase classname="BaseTest" name="shouldReturnFalse_whenNotEmpty()" time="0"/>
-  <testcase classname="FullCoverageTest" name="shouldReturnTrue_whenHasNext()" time="0"/>
+  <testcase classname="FullCoverageTest" name="shouldReturnTrue_whenHasNext()" time="0.001"/>
   <testcase classname="FullCoverageTest" name="shouldReturnTrue_whenEmpty()" time="0"/>
-  <testcase classname="FullCoverageTest" name="shouldReturnObjekt_whenExecuted()" time="0"/>
-  <testcase classname="FullCoverageTest" name="shouldThrow_whenEmptyPoped()" time="0.001"/>
-  <testcase classname="FullCoverageTest" name="shouldDecreaseSize_whenPopItems()" time="0"/>
+  <testcase classname="FullCoverageTest" name="shouldReturnObjekt_whenExecuted()" time="0.001"/>
+  <testcase classname="FullCoverageTest" name="shouldThrow_whenEmptyPoped()" time="0"/>
+  <testcase classname="FullCoverageTest" name="shouldDecreaseSize_whenPopItems()" time="0.001"/>
   <testcase classname="FullCoverageTest" name="shouldThrow_whenNoNext()" time="0.001"/>
   <testcase classname="FullCoverageTest" name="shouldThrow_whenPushedOverCapacity()" time="0"/>
   <testcase classname="FullCoverageTest" name="shouldReturnFalse_whenHasNoNext()" time="0"/>
   <testcase classname="FullCoverageTest" name="shouldIncreaseSize_whenPushingItems()" time="0"/>
-  <testcase classname="FullCoverageTest" name="shouldThrow_whenExecuted()" time="0.001"/>
-  <testcase classname="FullCoverageTest" name="shouldReturnFalse_whenNotEmpty()" time="0"/>
+  <testcase classname="FullCoverageTest" name="shouldThrow_whenExecuted()" time="0"/>
+  <testcase classname="FullCoverageTest" name="shouldReturnFalse_whenNotEmpty()" time="0.001"/>
   <testcase classname="FullMutationScoreTest" name="test()" time="0"/>
 </testsuite>

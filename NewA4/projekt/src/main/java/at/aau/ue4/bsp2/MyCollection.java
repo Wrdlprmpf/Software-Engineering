@@ -1,5 +1,7 @@
 package at.aau.ue4.bsp2;
 
+import java.util.Arrays;
+
 public class MyCollection {
     private String[] list;
     private int cursor=0;
@@ -31,14 +33,25 @@ public class MyCollection {
      * @param s String to remove
      */
     public void remove(String s) throws IllegalArgumentException{
-
+        for (int i = 0; i < list.length; i++) {
+            if(list[i]==s){
+                list[i]=null;
+                cursor--;
+            }
+        }
     }
 
     /**
      * Removes all items from the list and initializes a new list
      */
     public void empty() {
+        String[] newlist = new String[list.length];
 
+        while(cursor > 0){
+            cursor--;
+        }
+
+        this.list = newlist;
     }
 
 }
