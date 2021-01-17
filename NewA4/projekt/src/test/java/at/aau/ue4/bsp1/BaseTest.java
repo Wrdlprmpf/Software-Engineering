@@ -13,13 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BaseTest {
 
 	private RingBuffer<Integer> ringBuffer = new RingBuffer<>(5);
-	private RingBuffer<Integer> ringBufferEmpty = new RingBuffer<>(0);
 	private Iterator ringBufferIterator = ringBuffer.iterator();
-	private Iterator ringBufferEmptyIterator = ringBufferEmpty.iterator();
 
 	@Test
 	public void shouldReturnTrue_whenEmpty() {
-		assertTrue(ringBufferEmpty.isEmpty());
+		assertTrue(ringBuffer.isEmpty());
 	}
 
 	@Test
@@ -29,13 +27,27 @@ public class BaseTest {
 	}
 
 	@Test
+	public void shouldReturnZero_whenBufferisEmpty(){
+		assertEquals(0,ringBuffer.size());
+	}
+
+	@Test
 	public void shouldIncreaseSize_whenPushingItems() {
 		assertEquals(0, ringBuffer.size());
 		ringBuffer.push(1);
 		assertEquals(1, ringBuffer.size());
 		ringBuffer.push(2);
 		assertEquals(2, ringBuffer.size());
+	}
 
+	@Test
+	public void Should_ReturnFive_When_BufferHasFiveElement() {
+		ringBuffer.push(1);
+		ringBuffer.push(2);
+		ringBuffer.push(3);
+		ringBuffer.push(4);
+		ringBuffer.push(5);
+		assertEquals(5, ringBuffer.size());
 	}
 
 	@Test
@@ -64,7 +76,7 @@ public class BaseTest {
 
 	@Test
 	public void shouldThrow_whenEmptyPoped(){
-		assertThrows(RuntimeException.class, ()-> ringBufferEmpty.pop());
+		assertThrows(RuntimeException.class, ()-> ringBuffer.pop());
 	}
 
 	@Test
@@ -74,19 +86,16 @@ public class BaseTest {
 
 	@Test
 	public void shouldThrow_whenNoNext(){
-		assertThrows(new Exception().getClass(), ()-> ringBufferEmptyIterator.next());
+		assertThrows(new Exception().getClass(), ()-> ringBufferIterator.next());
 	}
 
 	@Test
-	public void shouldReturnObjekt_whenExecuted(){
+	public void shouldReturnObjekts_whenExecuted(){
 		ringBuffer.push(0);
 		ringBuffer.push(1);
 		ringBuffer.push(2);
 		ringBuffer.push(3);
 		ringBuffer.push(4);
-		
-		//assertEquals(1, ringBufferIterator.next());
-
 		for (int i = 0; i < ringBuffer.size() ; i++) {
 			assertEquals(i, ringBufferIterator.next());
 		}
@@ -94,18 +103,40 @@ public class BaseTest {
 	}
 
 	@Test
-	public void shouldReturnTrue_whenHasNext(){
+	public void shouldReturnTrue_whenBufferIsFull(){
 		ringBuffer.push(1);
+		ringBuffer.push(2);
+		ringBuffer.push(3);
+		ringBuffer.push(4);
+		ringBuffer.push(5);
 		assertTrue(ringBufferIterator.hasNext());
 
 	}
 
 	@Test
-	public void shouldReturnFalse_whenHasNoNext(){
+	public void shouldReturnFalse_whenBufferIsEmpty(){
 		assertFalse(ringBufferIterator.hasNext());
 
 	}
 
+	@Test
+	public void shouldReturnException_whenMethodRemoveIsLoaded() {
+		assertThrows(UnsupportedOperationException.class, () -> {
+			ringBuffer.push(0);
+			ringBuffer.push(1);
+			ringBuffer.push(2);
+			ringBuffer.push(3);
+			ringBuffer.push(4);
+			ringBufferIterator.remove();
+		});
+	}
+
+	@Test
+	public void shouldReturnException_whenThereIsNoNextElement() {
+		assertThrows(NoSuchElementException.class, () -> {
+			ringBufferIterator.next();
+		});
+	}
 
 }
 
