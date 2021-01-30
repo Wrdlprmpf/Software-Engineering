@@ -31,4 +31,31 @@ public class Order {
     public void setItems(List<Item> items) {
         this.items = items;
     }
+
+    public double calculatePrice(){
+        Double price=0.0d;
+        for (Item item : this.items) {
+            price+=item.getPrice();
+        }
+        return price;
+    }
+
+    public double shippingCosts(){
+        Double price =0.0d;
+        if(price<=100) {
+            Item item = new Item();
+            item.setId(99l);
+            item.setName("Porto und Versand");
+            if(price>90) {
+                item.setPrice(price*0.05);
+            } else if(price>50) {
+                item.setPrice(7.5d);
+            } else {
+                item.setPrice(10d);
+            }
+            this.items.add(item);
+        }
+        return price;
+    }
+
 }
