@@ -1,9 +1,10 @@
 package at.aau.ue5.bsp3;
 
 public class Tester extends Person{
-	public String bevorzugtesTestFramework;
+	private String bevorzugtesTestFramework;
 
-	public Tester(){
-		this.beruf="Tester";
+	public Tester(String vorname, String nachname, Integer alter, String beruf, String bevorzugtesTestFramework) {
+		super(vorname, nachname, alter, beruf);
+		this.bevorzugtesTestFramework = bevorzugtesTestFramework;
 	}
 }

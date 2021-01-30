@@ -22,13 +22,21 @@ package at.aau.ue5.bsp3;
 
  */
 public abstract class Person{
-    public String vorname, nachname;
-    public Integer alter;
-    public String beruf;
+    private String vorname, nachname;
+    private Integer alter;
+    private String beruf;
+
+    public Person(String vorname, String nachname, Integer alter, String beruf) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.alter = alter;
+        this.beruf = beruf;
+    }
 
     public String getJobBeschreibung(){
         return "Der Beruf ist "+beruf+".";
     }
+
 
 
 }
