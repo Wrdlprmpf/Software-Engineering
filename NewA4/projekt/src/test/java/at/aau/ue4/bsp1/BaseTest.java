@@ -27,7 +27,7 @@ public class BaseTest {
 	}
 
 	@Test
-	public void shouldReturnZero_whenBufferisEmpty(){
+	public void shouldReturnZero_whenBufferIsEmpty(){
 		assertEquals(0,ringBuffer.size());
 	}
 
@@ -65,6 +65,13 @@ public class BaseTest {
 	}
 
 	@Test
+	public void shouldGetPoppedItem_whenPopped(){
+		ringBuffer.push(1);
+		int test = ringBuffer.pop();
+		assertEquals(1, test);
+	}
+
+	@Test
 	public void shouldThrow_whenPushedOverCapacity() {
 		ringBuffer.push(1);
 		ringBuffer.push(2);
@@ -75,7 +82,7 @@ public class BaseTest {
 	}
 
 	@Test
-	public void shouldThrow_whenEmptyPoped(){
+	public void shouldThrow_whenEmptyPopped(){
 		assertThrows(RuntimeException.class, ()-> ringBuffer.pop());
 	}
 

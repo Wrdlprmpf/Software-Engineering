@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FullMutationScoreTest {
 
-    /** Code by Philipp Fößl **/
+
 
     private RingBuffer<Integer> ringBufferEmpty;
     private RingBuffer<Integer> ringBufferFull;
@@ -102,4 +102,7 @@ public class FullMutationScoreTest {
             assertEquals(i, (int) ringBufferIteratorFull.next());
         }
     }
+
+
+
 }
