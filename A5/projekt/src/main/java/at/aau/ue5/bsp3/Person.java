@@ -21,11 +21,14 @@ package at.aau.ue5.bsp3;
 }
 
  */
-public class Person{
+public abstract class Person{
     public String vorname, nachname;
     public Integer alter;
-    public String Beruf;
+    public String beruf;
 
+    public String getJobBeschreibung(){
+        return "Der Beruf ist "+beruf+".";
+    }
 
 
 }
