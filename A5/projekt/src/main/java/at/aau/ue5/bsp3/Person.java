@@ -1,6 +1,6 @@
 package at.aau.ue5.bsp3;
 
-public class Person {
+/*public class Person {
     public String vorname,nachname;
     public Integer alter;
     public String beruf;
@@ -18,4 +18,14 @@ public class Person {
             default: return "";
         }
     }
+}
+
+ */
+public class Person{
+    public String vorname, nachname;
+    public Integer alter;
+    public String Beruf;
+
+
+
 }
