@@ -24,19 +24,24 @@ package at.aau.ue5.bsp3;
 public abstract class Person{
     private String vorname, nachname;
     private Integer alter;
-    private String beruf;
 
-    public Person(String vorname, String nachname, Integer alter, String beruf) {
+    public Person(String vorname, String nachname, Integer alter) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.alter = alter;
-        this.beruf = beruf;
     }
 
-    public String getJobBeschreibung(){
-        return "Der Beruf ist "+beruf+".";
+    public abstract String getJobBeschreibung();
+
+    public String getVorname() {
+        return vorname;
     }
 
+    public String getNachname() {
+        return nachname;
+    }
 
-
+    public Integer getAlter() {
+        return alter;
+    }
 }
