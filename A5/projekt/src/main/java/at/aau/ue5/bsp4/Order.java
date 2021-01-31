@@ -33,18 +33,18 @@ public class Order {
     }
 
     public double calculatePrice(){
-        Double price=0.0d;
+        double price=0.0d;
         for (Item item : this.items) {
             price+=item.getPrice();
         }
         return price;
     }
 
-    public double shippingCosts(){
-        Double price =0.0d;
+    public double addShippingCostsToPrice(){
+        double price = this.calculatePrice();
         if(price<=100) {
             Item item = new Item();
-            item.setId(99l);
+            item.setId(99L);
             item.setName("Porto und Versand");
             if(price>90) {
                 item.setPrice(price*0.05);

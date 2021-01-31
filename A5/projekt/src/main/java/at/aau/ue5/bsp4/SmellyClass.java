@@ -3,11 +3,10 @@ package at.aau.ue5.bsp4;
 public class SmellyClass {
 
     public void erstelleRechnung(Order order) {
-        Double totalPrice=0.0d;
+        double totalPrice=0.0d;
+
         //Berechne Preis
-        totalPrice += order.calculatePrice();
-        //Berechne Lieferkosten
-        totalPrice += order.shippingCosts();
+        totalPrice += order.addShippingCostsToPrice();
         //Rechnung ausgeben
         printBill(totalPrice, order);
     }

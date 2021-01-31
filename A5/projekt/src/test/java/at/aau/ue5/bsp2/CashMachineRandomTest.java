@@ -1,10 +1,18 @@
 package at.aau.ue5.bsp2;
 
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CashMachineRandomTest {
+    private CashMachine[] cashMachines = new CashMachine[10000];
 
-    CashMachine[] cashMachines = new CashMachine[10000];
+	@BeforeEach
+	public void fillUpCash(){
+		for (int i = 0; i < cashMachines.length; i++) {
+			cashMachines[i] = new CashMachine();
+		}
+	}
 
     @Test
     public void randomTest(){

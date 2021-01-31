@@ -7,14 +7,15 @@ import static org.junit.Assert.assertTrue;
 
 public class CashMachineParameterTest {
 
-    private CashMachine cashMachine;
+    private CashMachine cashMachine = new CashMachine();
 
     @ParameterizedTest
-    @ValueSource(strings = {"1234", "3458", "42","9242022", "42421", "03430300"})
+    @ValueSource(strings = {"1234", "3458", "423","9242022", "42421", "03430300"})
     public void shouldReturnTrue_WhenNotEndingWith42(String number){
         cashMachine.insertCard(number);
         assertTrue(cashMachine.getCurrentState()==CashMachineState.CARD_INSERTED);
     }
+
 
     @ParameterizedTest
     @ValueSource(strings = {"12342", "345842", "42","9242042", "4242142", "034342030042"})
@@ -44,6 +45,8 @@ public class CashMachineParameterTest {
     public void shouldReturnTrue_WhenPinCountIsOver3(String pin){
         insertValidCard();
         cashMachine.inputPIN(pin);
+        cashMachine.inputPIN(pin);
+        cashMachine.inputPIN(pin);
         assertTrue(cashMachine.getCurrentState() == CashMachineState.CARD_RETAINED);
     }
 
@@ -65,6 +68,8 @@ public class CashMachineParameterTest {
         assertTrue(cashMachine.getCurrentState() == CashMachineState.AMOUNT_NOT_VALID);
     }
 
+    /** Kann nicht als ParameterizedTest ausgeführt werden.
+
     @ParameterizedTest
     @ValueSource()
     public void shouldReturnTrue_WhenCashIsTaken(){
@@ -85,6 +90,8 @@ public class CashMachineParameterTest {
         cashMachine.removeCard();
         assertTrue(cashMachine.getCurrentState() == CashMachineState.CARD_TAKEN);
     }
+    **/
+
 
     private void insertValidCard(){
         cashMachine.insertCard("12345");
@@ -101,4 +108,6 @@ public class CashMachineParameterTest {
     private void tookCash(){
         cashMachine.takeCash();
     }
+
+
 }
