@@ -65,6 +65,7 @@ public class CashMachineStateTest {
         assertThrows(IllegalStateException.class, ()->cashMachine.inputPIN("12345"));
     }
 
+    @Test
     public void test6(){
         cashMachine.insertCard("12345");
         assertTrue(cashMachine.getCurrentState() == CashMachineState.CARD_RETAINED);

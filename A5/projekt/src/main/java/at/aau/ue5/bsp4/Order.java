@@ -32,7 +32,7 @@ public class Order {
         this.items = items;
     }
 
-    public double calculatePrice(){
+    public double calculatePriceWithoutShippingCost(){
         double price=0.0d;
         for (Item item : this.items) {
             price+=item.getPrice();
@@ -40,8 +40,8 @@ public class Order {
         return price;
     }
 
-    public double addShippingCostsToPrice(){
-        double price = this.calculatePrice();
+    public double calculatePriceWithShippingCost(){
+        double price = this.calculatePriceWithoutShippingCost();
         if(price<=100) {
             Item item = new Item();
             item.setId(99L);

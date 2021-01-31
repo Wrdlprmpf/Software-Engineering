@@ -4,9 +4,8 @@ public class SmellyClass {
 
     public void erstelleRechnung(Order order) {
         double totalPrice=0.0d;
-
         //Berechne Preis
-        totalPrice += order.addShippingCostsToPrice();
+        totalPrice += order.calculatePriceWithShippingCost();
         //Rechnung ausgeben
         printBill(totalPrice, order);
     }
