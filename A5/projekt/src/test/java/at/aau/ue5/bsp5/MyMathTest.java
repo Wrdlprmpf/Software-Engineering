@@ -4,8 +4,7 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MyMathTest {
     MyMath math = new MyMath();
@@ -101,6 +100,66 @@ public class MyMathTest {
         setNumAndDenum(10,4);
 
         assertEquals(2.5, (double)math.toDouble(f));
+    }
+
+    @Test
+    public void shouldReturnDoubleNan_WhenDividedBy0(){
+        setNumAndDenum(10,0);
+
+        assertEquals(Double.NaN ,(double)math.div(10d,0d));
+    }
+
+    @Test
+    public void shouldReturnFalse_WhenInputIsDifferent(){
+        setNumAndDenum(10, 0);
+
+        Fraction a = new Fraction(10, 5);
+
+        assertFalse(math.equals(a));
+    }
+
+    @Test
+    public void shouldReturnTrue_WhenInputIsTheSame(){
+        setNumAndDenum(10, 0);
+
+        Fraction a = new Fraction(10, 0);
+
+        assertFalse(math.equals(a));
+    }
+
+    @Test
+    public void shouldReturn314_When10And4IsHashed(){
+        setNumAndDenum(10,4);
+
+        assertEquals(314,f.hashCode());
+    }
+
+    @Test
+    public void shouldReturn310_When10AndNullIsHashed(){
+        f = new Fraction(10, null);
+
+        assertEquals(310,f.hashCode());
+    }
+
+    @Test
+    public void shouldReturn10_WhenNullAnd10IsHashed(){
+        f = new Fraction(null, 10);
+
+        assertEquals(10,f.hashCode());
+    }
+
+    @Test
+    public void shouldReturnCorrectString_WhenInputIs10And5(){
+        setNumAndDenum(10,5);
+
+        assertEquals("Fraction{numerator=10, denumerator=5}",f.toString());
+    }
+
+    @Test
+    public void shouldReturnCorrectString_WhenInputNullAnd5(){
+        f = new Fraction(null, 5);
+
+        assertEquals("Fraction{numerator=null, denumerator=5}",f.toString());
     }
 
     public void setNumAndDenum(int numerator, int denumerator){
