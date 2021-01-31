@@ -24,7 +24,9 @@ public class CashMachineStateTest {
     @Test
     public void test2(){
         cashMachine.insertCard("1234");
+        assertTrue(cashMachine.getCurrentState() == CashMachineState.CARD_INSERTED);
         cashMachine.inputPIN("1234");
+        assertTrue(cashMachine.getCurrentState() == CashMachineState.PIN_OK);
         cashMachine.selectAmount(15);
         assertTrue(cashMachine.getCurrentState() == CashMachineState.AMOUNT_NOT_VALID);
         assertThrows(IllegalStateException.class, ()-> cashMachine.takeCash());
