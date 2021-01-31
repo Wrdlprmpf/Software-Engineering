@@ -1,27 +1,63 @@
 package at.aau.ue5.bsp5;
 
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MyMathTest {
+    MyMath math = new MyMath();
+    private double x = 10d;
+    private double y = 5d;
 
     @Test
-    public void x() {
-        Double x=10d;
-        Double y=5d;
-        Double add=new MyMath().add(x,y);
-        Double sub=new MyMath().sub(x,y);
-        Double mul=new MyMath().mul(x,y);
-        Double div=new MyMath().div(x,y);
-
-        assertTrue(add.equals(new Double(15)));
-        assertTrue(sub.equals(new Double(5)));
-        assertTrue(mul.equals(new Double(50)));
-        assertTrue(div.equals(new Double(2)));
+    public void testAdd(){
+        assertEquals(15d, (double)math.add(x,y));
     }
 
+    @Test
+    public void testSub(){
+        assertEquals(5d, (double)math.sub(x,y));
+    }
+
+    @Test
+    public void testMul(){
+        assertEquals(50d, (double)math.mul(x,y));
+    }
+
+    @Test
+    public void testDiv(){
+        assertEquals(2d, (double)math.div(x,y));
+    }
+
+    private Fraction f = new Fraction();
+
+    @Test
+    public void shouldReturn1And1_WhenInputIs1And1(){
+        this.f.setNumerator(1);
+        this.f.setDenumerator(1);
+
+        assertEquals(new Fraction(1,1), math.reduce(f));
+    }
+
+    @Test
+    public void shouldReturn5And3_WhenInputIs10And6(){
+        this.f.setNumerator(10);
+        this.f.setDenumerator(6);
+
+        assertEquals(new Fraction(5,3),math.reduce(f));
+    }
+
+    @Test
+    public void shouldReturn2And1_WhenInputIs10And5(){
+        this.f.setNumerator(10);
+        this.f.setDenumerator(5);
+
+        assertEquals(new Fraction(2,1),math.reduce(f));
+    }
+    /*
     @Test
     public void x2() {
         Fraction f = new Fraction(1,1);
@@ -51,5 +87,23 @@ public class MyMathTest {
         mm = new MyMath();
         aDouble = mm.toDouble(f);
         assertEquals(new Double(2.5d),aDouble);
+    }
+
+     */
+
+    @Test
+    public void shouldReturn2d_WhenInputIs10And5(){
+        this.f.setNumerator(10);
+        this.f.setDenumerator(5);
+
+        assertEquals(2, (double)math.toDouble(f));
+    }
+
+    @Test
+    public void shouldReturn2dot5_WhenInputIs10And4(){
+        this.f.setNumerator(10);
+        this.f.setDenumerator(4);
+
+        assertEquals(2.5, (double)math.toDouble(f));
     }
 }
