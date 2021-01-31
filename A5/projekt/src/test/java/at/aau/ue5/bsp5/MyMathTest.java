@@ -11,6 +11,8 @@ public class MyMathTest {
     MyMath math = new MyMath();
     private double x = 10d;
     private double y = 5d;
+    private Fraction f = new Fraction();
+
 
     @Test
     public void testAdd(){
@@ -32,28 +34,24 @@ public class MyMathTest {
         assertEquals(2d, (double)math.div(x,y));
     }
 
-    private Fraction f = new Fraction();
 
     @Test
     public void shouldReturn1And1_WhenInputIs1And1(){
-        this.f.setNumerator(1);
-        this.f.setDenumerator(1);
+        setNumAndDenum(1,1);
 
         assertEquals(new Fraction(1,1), math.reduce(f));
     }
 
     @Test
     public void shouldReturn5And3_WhenInputIs10And6(){
-        this.f.setNumerator(10);
-        this.f.setDenumerator(6);
+        setNumAndDenum(10,6);
 
         assertEquals(new Fraction(5,3),math.reduce(f));
     }
 
     @Test
     public void shouldReturn2And1_WhenInputIs10And5(){
-        this.f.setNumerator(10);
-        this.f.setDenumerator(5);
+        setNumAndDenum(10,5);
 
         assertEquals(new Fraction(2,1),math.reduce(f));
     }
@@ -93,17 +91,20 @@ public class MyMathTest {
 
     @Test
     public void shouldReturn2d_WhenInputIs10And5(){
-        this.f.setNumerator(10);
-        this.f.setDenumerator(5);
+        setNumAndDenum(10,5);
 
         assertEquals(2, (double)math.toDouble(f));
     }
 
     @Test
     public void shouldReturn2dot5_WhenInputIs10And4(){
-        this.f.setNumerator(10);
-        this.f.setDenumerator(4);
+        setNumAndDenum(10,4);
 
         assertEquals(2.5, (double)math.toDouble(f));
+    }
+
+    public void setNumAndDenum(int numerator, int denumerator){
+        this.f.setNumerator(numerator);
+        this.f.setDenumerator(denumerator);
     }
 }
